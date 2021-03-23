@@ -1,0 +1,304 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+
+body{
+  /*background-image: url("images/bg-top.svg");*/
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(240, 78%, 98%);
+
+}
+
+a{
+  text-decoration: none;
+  color: hsl(237, 63%, 64%);
+}
+
+header{
+    padding: 4em;
+    text-align: center;
+    color: hsl(233, 13%, 49%)
+}
+
+h1{
+  font-size: 2rem;
+}
+
+h4{
+  color:hsl(234, 14%, 74%);
+}
+
+.switch-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px; /* I noticed gap is pretty much only useable on Firefox! */
+
+  padding: 2em;
+}
+
+/*Addded spacing to all children as "gap" isn't supported on most browsers*/
+.switch-container > *{
+  margin: 0 1em;
+}
+
+
+.container{
+  padding: 0 10%;;
+}
+
+
+
+
+
+
+/* ------ TABLE STYLES -------*/
+
+.tables-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.price-table{
+  text-align: center;
+
+  background-color: #fff;
+  color: hsl(232, 13%, 33%);
+
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+
+  padding: 1em;
+  height: 500px;
+
+  
+}
+
+
+.price-table:nth-of-type(1){
+  border-radius: 8px 0 0 8px;
+  grid-column-start: 1/2;
+}
+
+.price-table:nth-of-type(3){
+  border-radius: 0 8px 8px 0;
+  grid-column: 3/4;
+}
+
+
+
+
+.price-table > ul,li{
+  display: block;
+  padding: 1em;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.price-table li{
+  border-top: 1px solid hsl(234, 14%, 74%);
+  
+}
+
+.price-table > h2{
+  font-size: 1.2em;
+}
+
+.price-table > h3{
+  font-size: 4rem;
+}
+
+.price-table > h2{
+  padding: 2em;
+}
+
+.price-table span{
+  font-size: 2.5rem;  
+}
+
+
+/* ---- Styles for highlighted price table ------*/
+.highlight-table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+
+  border-radius: 8px;
+
+  height: 550px;
+
+  grid-column: 2/3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------ BUTTON STYLES -------*/
+
+.button-dark{
+  font-size: 15px;
+  font-family: "montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  width: 100%;
+  padding: 1em;
+  margin-top: 20px;
+
+  background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease 0s;
+}
+
+.button-light{
+  font-size: 15px;
+  font-family: "montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  width: 100%;
+  padding: 1em;
+  margin-top: 20px;
+
+  background-color: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+  color: hsl(237, 63%, 64%);
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+  
+  transition: 0.2s ease 0s;
+}
+
+.button-dark:hover, .button-light:hover {
+  letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+  .attribution{
+    padding: 5em 10%;
+    font-size: 15px;
+    text-align: center;
+  }
+
+
+
+
+ /* -------- PRICE TABLE TOGGLE CLASS ------ */
+
+
+  .tables-hidden{
+    display: none;
+  }
+
+
+
+
+
+
+  
